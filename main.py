@@ -18,7 +18,7 @@ url = [(r'/login', LoginHandler),
 
 access_log = logging.getLogger('tornado.access')
 access_log.setLevel(logging.INFO)
-hanlder = logging.handlers.TimedRotatingFileHandler(filename='access.log', when='D')
+hanlder = logging.handlers.TimedRotatingFileHandler(filename='log/access.log', when='D')
 datefmt = '%Y-%m-%d %H:%M:%S'
 fmt = '%(color)s[%(levelname)1.1s %(asctime)s %(module)s:%(lineno)d]%(end_color)s %(message)s'
 formatter = LogFormatter(color=True, datefmt=datefmt, fmt=fmt)
@@ -27,7 +27,7 @@ access_log.addHandler(hanlder)
 
 app_log = logging.getLogger('tornado.application')
 app_log.setLevel(logging.WARNING)
-hanlder = logging.handlers.TimedRotatingFileHandler(filename='application.log', when='D')
+hanlder = logging.handlers.TimedRotatingFileHandler(filename='log/application.log', when='D')
 fmt = '%(color)s[%(levelname)1.1s %(asctime)s %(funcName)s:%(lineno)d]%(end_color)s %(message)s'
 formatter = LogFormatter(color=True, datefmt=datefmt, fmt=fmt)
 hanlder.setFormatter(formatter)

@@ -1,4 +1,5 @@
-*.log
 handler/tb/__pycache__/
 handler/tbzs/__pycache__/
 handler/__pycache__/
+log/
+.idea/
