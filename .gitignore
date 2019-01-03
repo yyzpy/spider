@@ -3,3 +3,5 @@ handler/tbzs/__pycache__/
 handler/__pycache__/
 log/
 .idea/
+.gitee/
+*.pyc
